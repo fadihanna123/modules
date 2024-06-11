@@ -1,0 +1,9 @@
+@base=http://localhost:{{DEV_PORT}}
+###
+POST {{base}}/login
+Content-Type: application/json
+
+{
+    "username": "Erik",
+    "psw": "123"
+}

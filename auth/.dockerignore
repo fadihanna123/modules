@@ -1,0 +1,18 @@
+# Dependencies
+node_modules
+
+# Build
+build
+
+# Docker
+
+Dockerfile
+
+# Logs
+src/logs
+
+# Environment
+.env
+
+# Docker
+Dockerfile
