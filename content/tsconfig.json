@@ -1,0 +1,47 @@
+{
+  "include": ["src/**/*"],
+  "exclude": ["node_modules"],
+  "files": ["src/types/global.d.ts"],
+  "ts-node": {
+    "files": true
+  },
+  "compilerOptions": {
+    "target": "es6",
+    "lib": ["DOM", "DOM.Iterable", "esnext"],
+    "baseUrl": "src",
+    "module": "NodeNext",
+    "strict": true,
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true,
+    "sourceMap": true,
+    "alwaysStrict": true,
+    "outDir": "dist",
+    "allowJs": true,
+    "allowUnreachableCode": false,
+    "allowUnusedLabels": false,
+    "checkJs": true,
+    "composite": true,
+    "declaration": true,
+    "declarationMap": true,
+    "moduleDetection": "force",
+    "noImplicitAny": true,
+    "noImplicitOverride": true,
+    "noImplicitThis": true,
+    "typeRoots": ["./node_modules/@types", "./src/types"],
+    "types": ["node"],
+    "strictNullChecks": true,
+    "strictBindCallApply": true,
+    "strictFunctionTypes": true,
+    "strictPropertyInitialization": true,
+    "useUnknownInCatchVariables": false,
+    "rootDir": "src",
+    "noUnusedLocals": true,
+    "noPropertyAccessFromIndexSignature": true,
+    "noUncheckedIndexedAccess": true,
+    "removeComments": true,
+    "paths": {
+      "@core/*": ["src/*"]
+    }
+  }
+}

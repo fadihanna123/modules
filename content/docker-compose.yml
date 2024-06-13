@@ -1,0 +1,36 @@
+services:
+  content_service:
+    build: .
+    container_name: content_module
+    ports:
+      - 5001:5001
+    env_file:
+      - .env.production
+    restart: unless-stopped
+
+  content_module_db_service:
+    image: mysql:latest
+    container_name: content_module_db_sql
+    ports:
+      - 3306:3306
+    restart: unless-stopped
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: cv_react_db
+      MYSQL_PASSWORD: '0000'
+      MYSQL_USER: fadi
+    volumes:
+      - cv_react_db-data:/var/lib/mysql
+
+  content_module_adminer_service:
+    image: adminer:standalone
+    container_name: cv_react_db_admin_sql
+    ports:
+      - 8080:8080
+    restart: unless-stopped
+    volumes:
+      - cv_react_db_admin:/var/lib/mysql
+
+volumes:
+  cv_react_db-data:
+  cv_react_db_admin:

@@ -3,7 +3,7 @@ import 'dotenv/config';
 import '@core/tasks';
 
 import { listenFn } from '@core/controllers';
-import loginRoutes from './api/login';
+import routes from './api/routes';
 import express, { Application } from 'express';
 import helmet from 'helmet';
 import { logger } from '@core/tools';
@@ -52,7 +52,7 @@ server.use(express.urlencoded({ extended: true }));
 // Add security to the server.
 server.use(helmet());
 // Use Login routes.
-server.use(loginRoutes);
+server.use(routes);
 // Handle if someone access unknown or not found route.
 server.use((_, res) => res.send('This route does not exist!'));
 // Handle errors.

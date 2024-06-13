@@ -1,0 +1,5 @@
+@base = http://localhost:{{DEV_PORT}}
+###
+GET {{base}}/menu
+APIKEY : {{APIKEY}}
+AUTHORIZATION : {{AUTHORIZATION}}
