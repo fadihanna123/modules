@@ -3,10 +3,10 @@
   "version": "1.0.1",
   "license": "MIT",
   "private": "true",
-  "bugs": "x",
+  "bugs": "https://github.com/fadihanna123/modules/issues",
   "repository": {
     "type": "git",
-    "url": "x"
+    "url": "https://github.com/fadihanna123/modules.git"
   },
   "author": {
     "name": "Fadi Hanna",
