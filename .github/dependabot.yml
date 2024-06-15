@@ -1,0 +1,20 @@
+version: 2
+updates:
+  - package-ecosystem: "npm" 
+    directory: "auth/" 
+    schedule:
+      interval: "monthly"
+
+version: 2
+updates:
+  - package-ecosystem: "npm" 
+    directory: "content/" 
+    schedule:
+      interval: "monthly"
+
+version: 2
+updates:
+  - package-ecosystem: "npm" 
+    directory: "user/" 
+    schedule:
+      interval: "monthly"
