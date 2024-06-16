@@ -5,7 +5,6 @@ node_modules
 build
 
 # Docker
-
 Dockerfile
 
 # Logs
@@ -13,6 +12,3 @@ src/logs
 
 # Environment
 .env
-
-# Docker
-Dockerfile
