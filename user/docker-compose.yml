@@ -1,0 +1,47 @@
+services:
+  user_module_db_service:
+    image: mysql
+    container_name: user_module_db_container
+    ports:
+      - 3306:3306
+    restart: unless-stopped
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: user_module_db
+      MYSQL_PASSWORD: '0000'
+      MYSQL_USER: fadi
+    volumes:
+      - user_module_db-data:/var/lib/mysql
+
+  user_module_admin_service:
+    image: phpmyadmin
+    container_name: user_module_db_admin
+    ports:
+      - 8080:80
+    restart: unless-stopped
+    environment:
+      PMA_HOST: user_module_db_service
+      MYSQL_ROOT_PASSWORD: root
+    volumes:
+      - user_module_db_admin:/var/lib/mysql
+    depends_on:
+      - user_module_db_service
+
+  user_service:
+    build: .
+    container_name: user_module
+    ports:
+      - 5006:5006
+    env_file:
+      - .docker.env
+    restart: always
+    volumes:
+      - ./:/user
+      - /user/node_modules
+    links:
+      - user_module_db_service
+    command: yarn dev
+
+volumes:
+  user_module_db-data:
+  user_module_db_admin:

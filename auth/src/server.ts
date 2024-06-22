@@ -1,13 +1,13 @@
 // @ts-check
 import 'dotenv/config';
-import '@core/tasks';
+import './tasks';
 
-import { listenFn } from '@core/controllers';
+import { listenFn } from './controllers';
 import routes from './api/routes';
 import express, { Application } from 'express';
 import helmet from 'helmet';
-import { logger } from '@core/tools';
-import { errorHandler, allowedURLs, isCors, port } from '@core/utils';
+import { logger } from './tools';
+import { errorHandler, allowedURLs, isCors, port } from './utils';
 import cors, { CorsOptions } from 'cors';
 import { rateLimit } from 'express-rate-limit';
 

@@ -4,5 +4,5 @@ COPY package.json .
 RUN npm i --ignore-scripts -g ts-node-dev 
 RUN yarn
 COPY . .
-EXPOSE ${PROD_PORT}
+EXPOSE ${DEV_PORT}
 CMD yarn dev

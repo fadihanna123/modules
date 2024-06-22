@@ -1,19 +1,7 @@
-const {
-  DEV_PORT,
-  PROD_PORT,
-  ALLOWEDOMAINS,
-  APIKEY,
-  AUTHORIZATION,
-  USE_CORS,
-  NODE_ENV,
-} = process.env;
+const { DEV_PORT, ALLOWEDOMAINS, APIKEY, AUTHORIZATION, USE_CORS } =
+  process.env;
 
-export const serverPort =
-  NODE_ENV === 'development'
-    ? DEV_PORT
-    : NODE_ENV === 'production'
-      ? PROD_PORT
-      : undefined;
+export const serverPort = DEV_PORT;
 
 export const allowedDomains = ALLOWEDOMAINS;
 

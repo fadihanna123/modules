@@ -1,6 +1,7 @@
-import { logger } from '@core/tools';
-import { port } from '@core/utils';
-import { Logger } from 'winston';
+import { logger } from '../tools';
+import { port } from '../utils';
+
+const { NODE_ENV } = process.env;
 
 /**
  * Listen to the server.
@@ -10,5 +11,7 @@ import { Logger } from 'winston';
  * @returns { void }
  * @example listenFn();
  */
-export const listenFn = (): Logger =>
+export const listenFn = () => {
   logger.info(`Server started on port ${port}`);
+  NODE_ENV === 'production' && console.log(`Server started on port ${port}`);
+};

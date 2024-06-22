@@ -11,8 +11,9 @@ docs
 # Logs
 src/logs
 
-# Enviroment
+# Environment
 .env
+.docker.env
 
 # Linting
 .eslintrc.js

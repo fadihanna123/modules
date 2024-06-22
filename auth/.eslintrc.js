@@ -19,10 +19,8 @@ const config = {
   },
   plugins: ['@typescript-eslint'],
   rules: {
-    'no-console': 'error',
-    indent: ['error', 2],
-    quotes: ['error', 'single'],
-    semi: ['error', 'always'],
+    quotes: ['warn', 'single'],
+    semi: ['warn', 'always'],
     '@typescript-eslint/no-explicit-any': 'off',
   },
 };

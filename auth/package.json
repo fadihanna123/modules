@@ -13,7 +13,7 @@
     "email": "fhanna181@gmail.com"
   },
   "scripts": {
-    "dev": "ts-node-dev -r tsconfig-paths/register src/server",
+    "dev": "ts-node-dev --poll -r tsconfig-paths/register src/server",
     "lint": "eslint .",
     "format": "prettier -w ."
   },
@@ -23,6 +23,7 @@
     "@types/express": "^4.17.21",
     "@types/jsonwebtoken": "^9.0.6",
     "@types/luxon": "^3.4.2",
+    "@types/node": "^20.14.2",
     "@types/node-cron": "^3.0.11",
     "@typescript-eslint/eslint-plugin": "^7.13.0",
     "@typescript-eslint/parser": "^7.13.0",

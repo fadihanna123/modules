@@ -1,5 +1,5 @@
 // @ts-check
-import { logger } from '@core/tools';
+import { logger } from '../tools';
 
 /**
  * @author Fadi Hanna<fhanna181@gmail.com>

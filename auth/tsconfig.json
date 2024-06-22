@@ -3,7 +3,6 @@
     "target": "ES2017",
     "outDir": "dist",
     "lib": ["DOM", "DOM.Iterable", "ESNext"],
-    "baseUrl": "src",
     "module": "NodeNext",
     "strict": true,
     "esModuleInterop": true,
@@ -33,10 +32,7 @@
     "noUnusedLocals": true,
     "noPropertyAccessFromIndexSignature": true,
     "noUncheckedIndexedAccess": true,
-    "removeComments": true,
-    "paths": {
-      "@core/*": ["*"]
-    }
+    "removeComments": true
   },
   "include": ["src/**/*"],
   "files": ["src/types/global.d.ts"],

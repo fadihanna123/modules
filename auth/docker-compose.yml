@@ -1,0 +1,13 @@
+services:
+  auth_service:
+    build: .
+    container_name: auth_module
+    ports:
+      - ${DEV_PORT}:${DEV_PORT}
+    env_file:
+      - .docker.env
+    volumes:
+      - ./:/auth
+      - /auth/node_modules
+    restart: unless-stopped
+    command: yarn dev

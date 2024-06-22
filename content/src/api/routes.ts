@@ -4,8 +4,8 @@ import {
   deleteContent,
   getContent,
   updateContent,
-} from 'controllers';
-import { getContentById } from 'controllers/getContentById';
+} from '../controllers';
+import { getContentById } from '../controllers/getContentById';
 
 const router: Router = Router();
 

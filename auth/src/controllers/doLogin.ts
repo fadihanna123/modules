@@ -1,6 +1,6 @@
 import { Response } from 'express';
 import jwt from 'jsonwebtoken';
-import { port } from '@core/utils';
+import { port } from '../utils';
 import axios from 'axios';
 
 /**

@@ -1,6 +1,6 @@
 import { Router } from 'express';
 
-import { doLogin } from '@core/controllers';
+import { doLogin } from '../controllers';
 
 const router = Router();
 

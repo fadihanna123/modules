@@ -6,9 +6,8 @@
     "files": true
   },
   "compilerOptions": {
-    "target": "es6",
+    "target": "ES2017",
     "lib": ["DOM", "DOM.Iterable", "esnext"],
-    "baseUrl": "src",
     "module": "NodeNext",
     "strict": true,
     "esModuleInterop": true,
@@ -39,9 +38,6 @@
     "noUnusedLocals": true,
     "noPropertyAccessFromIndexSignature": true,
     "noUncheckedIndexedAccess": true,
-    "removeComments": true,
-    "paths": {
-      "@core/*": ["src/*"]
-    }
+    "removeComments": true
   }
 }
