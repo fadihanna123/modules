@@ -6,9 +6,14 @@ build
 
 # Docker
 Dockerfile
+.dockerignore
 
 # Logs
 src/logs
 
 # Environment
 .env
+.docker.env
+
+# Config
+.editorconfig
