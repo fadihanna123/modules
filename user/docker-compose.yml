@@ -1,6 +1,6 @@
 services:
   user_module_db_service:
-    image: mysql
+    image: mysql:lts-oraclelinux9
     container_name: user_module_db_container
     ports:
       - 3306:3306
@@ -14,7 +14,7 @@ services:
       - user_module_db-data:/var/lib/mysql
 
   user_module_admin_service:
-    image: phpmyadmin
+    image: phpmyadmin:fpm-alpine
     container_name: user_module_db_admin
     ports:
       - 8080:80

@@ -20,7 +20,6 @@ import cors, { CorsOptions } from 'cors';
  * @author Fadi Hanna<fhanna181@gmail.com>
  */
 
-console.log('hej');
 
 // deepcode ignore UseCsurfForExpress: Csurf package is deprecated.
 const server: Application = express();
