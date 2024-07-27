@@ -1,6 +1,6 @@
 # Modules
 
-> Modules Template is backend template for handling various development backend tasks like authentication or creating content. <br />
+> Modules Template is a backend template for handling various development backend tasks like authentication or creating content. <br />
 
 > Auth Module: To authenticate login. <br />
 > Content Module: To get/add/update/Delete content like menuitems/cards/posts. <br />
