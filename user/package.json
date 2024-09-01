@@ -1,6 +1,6 @@
 {
   "name": "user_module",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "license": "MIT",
   "private": "true",
   "bugs": "https://github.com/fadihanna123/modules/issues",
@@ -42,7 +42,7 @@
     "eslint-plugin-prettier": "^5.2.1",
     "express-rate-limit": "^7.4.0",
     "node-cron": "^3.0.3",
-    "prisma": "^5.18.0",
+    "prisma": "^5.19.0",
     "tsconfig-paths": "^4.2.0",
     "typescript": "^5.5.4"
   },
