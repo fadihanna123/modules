@@ -11,7 +11,10 @@ const { NODE_ENV } = process.env;
  * @returns { void }
  * @example listenFn();
  */
-export const listenFn = () => {
+export const listenFn = (): void => {
   logger.info(`Server started on port ${port}`);
-  NODE_ENV === 'production' && console.log(`Server started on port ${port}`);
+
+  if (NODE_ENV === 'production') {
+    console.log(`Server started on port ${port}`);
+  }
 };

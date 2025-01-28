@@ -1,4 +1,0 @@
-node_modules
-docs/*
-src/tools/docs/*.ts
-*.html

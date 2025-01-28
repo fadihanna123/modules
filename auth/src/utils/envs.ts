@@ -7,6 +7,6 @@ export const port =
     ? DEV_PORT
     : NODE_ENV === 'production'
     ? PROD_PORT
-    : undefined;
+    : 8080;
 
 export const isCors = USE_CORS;

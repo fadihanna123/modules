@@ -21,8 +21,8 @@ const connectDb = async (): Promise<void> => {
     logger.info('Database is connnected');
     storeLog('Database is connnected');
   } catch (error) {
-    logger.error('Database has error');
-    storeError('Database has error');
+    logger.error('Database has error', error);
+    storeError('Database has error', error);
   }
 };
 

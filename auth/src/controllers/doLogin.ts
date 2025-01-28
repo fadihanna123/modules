@@ -47,7 +47,7 @@ export const doLogin = async (
       }
     } catch (err) {
       // If there is any error.
-      return res.status(500).send();
+      return res.status(500).send(err);
     }
   } // End if the user filled in all boxes.
 };

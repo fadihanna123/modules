@@ -4,7 +4,7 @@ import routes from './api/routes';
 import { listenFn } from './controllers';
 import { connectDb } from './db';
 import express, { json, urlencoded, Application } from 'express';
-import rateLimit from 'express-rate-limit';
+import { rateLimit } from 'express-rate-limit';
 import helmet from 'helmet';
 import { logger } from './tools';
 import {
@@ -19,7 +19,6 @@ import cors, { CorsOptions } from 'cors';
 /**
  * @author Fadi Hanna<fhanna181@gmail.com>
  */
-
 
 // deepcode ignore UseCsurfForExpress: Csurf package is deprecated.
 const server: Application = express();
@@ -61,7 +60,10 @@ connectDb();
 // Add rate limiter to limit requests.
 server.use(limiter);
 // Add cors to the server and handle who can access to the server.
-isCors && server.use(cors(corsOptions));
+if (isCors) {
+  server.use(cors(corsOptions));
+}
+
 // Add secuirty middleware and parse JSON data to the server.
 server.use(helmet());
 server.use(json({ type: 'application/json', limit: '1kb' }));

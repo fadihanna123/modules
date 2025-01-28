@@ -45,7 +45,10 @@ const corsOptions: CorsOptions = {
 };
 
 // Use CORS.
-isCors && server.use(cors(corsOptions));
+if (isCors) {
+  server.use(cors(corsOptions));
+}
+
 // Restrict counts of requests.
 server.use(rateLimit(limiter));
 // Handle connection to database.
