@@ -2,6 +2,7 @@ import { prisma } from '../db';
 import { Response } from 'express';
 import { logger } from '../tools';
 import { apiKey, authorizationKey, storeError, storeLog } from '../utils';
+import isExists from './isExists';
 
 /**
  * @author Fadi Hanna <fhanna181@gmail.com>
@@ -26,10 +27,15 @@ export const updateContent = async (
   ) {
     try {
       const id = Number(req.params['id']);
+      if (!(await isExists(id))) {
+        res.json({ warning: 'This post was not found!' });
+        return;
+      }
+
       await prisma.content.update({ where: { id }, data: req.body });
 
       storeLog('Changed', 'PUT', `/content/${id}`);
-      res.send({ message: 'Changed' });
+      res.send({ data: req.body });
     } catch (err) {
       storeError((err as Error).message, 'PUT', `/content/${req.params['id']}`);
 

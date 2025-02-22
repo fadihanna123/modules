@@ -1,4 +1,5 @@
-const { ALLOWEDOMAINS, NODE_ENV, DEV_PORT, PROD_PORT, USE_CORS } = process.env;
+const { ALLOWEDOMAINS, NODE_ENV, DEV_PORT, PROD_PORT, USE_CORS, Token } =
+  process.env;
 
 export const allowedURLs = ALLOWEDOMAINS;
 
@@ -10,3 +11,5 @@ export const port =
     : 8080;
 
 export const isCors = USE_CORS;
+
+export const secretToken = Token;

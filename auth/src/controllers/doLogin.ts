@@ -1,7 +1,6 @@
 import { Response } from 'express';
 import jwt from 'jsonwebtoken';
-import { port } from '../utils';
-import axios from 'axios';
+import { secretToken } from '../utils';
 
 /**
  * Do a login check.
@@ -23,6 +22,7 @@ export const doLogin = async (
 
   const userObject: UsrObjJwt = {
     username,
+    psw,
   };
 
   if (!username || !psw) {
@@ -31,20 +31,8 @@ export const doLogin = async (
   } else {
     // If the user filled in all the boxes.
     try {
-      const { data } = await axios.post(`http://localhost:${port}/users`, {
-        username,
-        psw,
-      });
-
-      if (data.length === 0) {
-        res.json({
-          message: 'There is an error in your username/password.',
-        });
-      } else {
-        // Return accesToken.
-        const accessToken = jwt.sign(userObject, process.env['Token']!);
-        res.json({ accessToken, author: username });
-      }
+      const accessToken = jwt.sign(userObject, secretToken!);
+      res.json({ accessToken, author: username });
     } catch (err) {
       // If there is any error.
       return res.status(500).send(err);

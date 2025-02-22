@@ -63,7 +63,7 @@ declare global {
     body: T;
   }
 
-  type Routes = '/register';
+  type Routes = '/register' | '/users';
 }
 
 export {};

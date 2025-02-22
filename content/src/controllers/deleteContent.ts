@@ -2,6 +2,7 @@ import { prisma } from '../db';
 import { Response } from 'express';
 import { logger } from '../tools';
 import { apiKey, authorizationKey, storeError, storeLog } from '../utils';
+import isExists from './isExists';
 
 /**
  * @author Fadi Hanna <fhanna181@gmail.com>
@@ -26,11 +27,15 @@ export const deleteContent = async (
   ) {
     try {
       const id = Number(req.params['id']);
+      if (!(await isExists(id))) {
+        res.json({ warning: 'This post was not found!' });
+      }
+
       await prisma.content.delete({ where: { id } });
 
       storeLog('Deleted', 'DELETE', `/content/${id}`);
 
-      res.send({ message: 'Deleted' });
+      res.send({ message: `Post ${id} is deleted` });
     } catch (err) {
       storeError(
         (err as Error).message,

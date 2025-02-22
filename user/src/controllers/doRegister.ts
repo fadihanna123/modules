@@ -61,14 +61,13 @@ export const doRegister = async (
         if (findUser !== 0) {
           // If the user was found in the database.
           storeLog(
-            'You are already registered with us. You can log in above.',
+            'You are already registered with us. You can log in.',
             'POST',
             '/register'
           );
 
           res.json({
-            message:
-              'You are already registered with us. You can log in above.',
+            message: 'You are already registered with us. You can log in.',
           });
         } else {
           // If the user was not found in the database.

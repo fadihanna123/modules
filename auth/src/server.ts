@@ -55,9 +55,7 @@ server.use(express.urlencoded({ extended: true }));
 // Add security to the server.
 server.use(helmet());
 // Use Login routes.
-server.use(routes);
-// Handle if someone access unknown or not found route.
-server.use((_, res) => res.send('This route does not exist!'));
+server.use('/api/auth/', routes);
 // Handle errors.
 server.use(errorHandler);
 

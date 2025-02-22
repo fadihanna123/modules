@@ -1,4 +1,9 @@
-import type { ErrorRequestHandler, Request, Response } from 'express';
+import type {
+  ErrorRequestHandler,
+  NextFunction,
+  Request,
+  Response,
+} from 'express';
 import { logger } from '../tools';
 
 /**
@@ -12,11 +17,13 @@ import { logger } from '../tools';
 export const errorHandler: ErrorRequestHandler = (
   error: Error,
   _req: Request,
-  res: Response
+  res: Response,
+  next: NextFunction
 ) => {
   if (error) {
     logger.error('Unhandled error', { error: error.message });
-    return res.status(500).json({ error: 'Server error.' });
+    res.status(500).json({ error: 'Server error.' });
+    next();
   }
 
   res.end();

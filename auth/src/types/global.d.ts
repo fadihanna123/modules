@@ -23,6 +23,7 @@ declare global {
    */
   interface UsrObjJwt {
     username: string;
+    psw: string;
   }
 
   /**

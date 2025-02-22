@@ -2,7 +2,8 @@
 import 'dotenv/config';
 import '@core/tasks';
 
-import register from '@core/api/register';
+import registerRoutes from '@core/api/register';
+import userRoutes from '@core/api/users';
 import { listenFn } from '@core/controllers';
 import express, { Application } from 'express';
 import helmet from 'helmet';
@@ -59,10 +60,9 @@ server.use(express.json({ type: 'application/json', limit: '1kb' }));
 server.use(express.urlencoded({ extended: true }));
 // Add security to the server.
 server.use(helmet());
-// Use register routes.
-server.use(register);
-// Handle if someone access unknown or not found route.
-server.use((_, res) => res.send('This route does not exist!'));
+// Use register and users routes.
+server.use('/api/auth/', registerRoutes);
+server.use('/api/', userRoutes);
 // Handle errors.
 server.use(errorHandler);
 
