@@ -27,7 +27,7 @@
     "schema": "src/prisma/schema.prisma"
   },
   "devDependencies": {
-    "@eslint/eslintrc": "3.3.0",
+    "@eslint/eslintrc": "3.3.1",
     "@eslint/js": "9.21.0",
     "@types/cors": "2.8.17",
     "@types/eslint": "9.6.1",
