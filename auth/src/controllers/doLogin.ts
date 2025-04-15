@@ -11,13 +11,9 @@ import { secretToken } from '../utils';
  * @route POST /login
  * @param { typedRequestedBody<IUsers> } req
  * @param { Response } res
- * @returns { Promise<Response<any, Record<string, any>> | undefined> } Promise.
  * @example doLogin(req, res);
  */
-export const doLogin = async (
-  req: typedRequestBody<IUsers>,
-  res: Response
-): Promise<Response<any, Record<string, any>> | undefined> => {
+export const doLogin = async (req: typedRequestBody<IUsers>, res: Response) => {
   const { username, psw } = req.body;
 
   const userObject: UsrObjJwt = {
@@ -35,7 +31,7 @@ export const doLogin = async (
       res.json({ accessToken, author: username });
     } catch (err) {
       // If there is any error.
-      return res.status(500).send(err);
+      res.status(500).send(err);
     }
   } // End if the user filled in all boxes.
 };
