@@ -8,23 +8,23 @@ updates:
   - package-ecosystem: "npm" # See documentation for possible values
     directory: "/" # Location of package manifests
     schedule:
-      interval: "monthly"
+      interval: "weekly"
 
 updates:
   - package-ecosystem: "npm" # See documentation for possible values
     directory: "/auth" # Location of package manifests
     schedule:
-      interval: "monthly"
+      interval: "weekly"
 
 updates:
   - package-ecosystem: "npm" # See documentation for possible values
     directory: "/content" # Location of package manifests
     schedule:
-      interval: "monthly"
+      interval: "weekly"
 
 
 updates:
   - package-ecosystem: "npm" # See documentation for possible values
     directory: "/user" # Location of package manifests
     schedule:
-      interval: "monthly"
+      interval: "weekly"
