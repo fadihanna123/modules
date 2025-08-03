@@ -1,6 +1,7 @@
 {
   "name": "modules",
-  "version": "1.0.1",
+  "version": "1.0.2",
+  "lastUpgrade": "20250803",
   "repository": "https://github.com/fadihanna123/modules.git",
   "author": "fadihanna123 <fadialias230@gmail.com>",
   "license": "MIT",
@@ -11,7 +12,7 @@
     "clear": "rimraf node_modules && cd auth && rimraf node_modules dist dbDocs docs && cd .. && cd content && rimraf node_modules dbDocs dist docs && cd .. && cd user && rimraf node_modules dbDocs docs dist"
   },
   "devDependencies": {
-    "concurrently": "9.1.2",
+    "concurrently": "9.2.0",
     "rimraf": "6.0.1"
   }
 }

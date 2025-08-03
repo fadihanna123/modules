@@ -32,6 +32,7 @@ services:
     container_name: user_module
     ports:
       - 5006:5006
+      - 5555:5555
     env_file:
       - .docker.env
     restart: always

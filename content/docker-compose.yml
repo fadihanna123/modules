@@ -32,6 +32,7 @@ services:
     container_name: content_module
     ports:
       - 5004:5004
+      - 5555:5555
     env_file:
       - .docker.env
     restart: always
