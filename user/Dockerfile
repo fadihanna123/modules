@@ -1,4 +1,4 @@
-FROM node:22.17.0-slim
+FROM node:22.17.1-slim
 WORKDIR /user
 COPY yarn.lock package.json ./
 RUN npm i --silent --ignore-scripts -g prisma ts-node-dev 
