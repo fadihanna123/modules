@@ -42,7 +42,7 @@
     "@typescript-eslint/parser": "8.39.1",
     "cors": "2.8.5",
     "dotenv": "17.2.1",
-    "eslint": "9.33.0",
+    "eslint": "9.34.0",
     "eslint-config-prettier": "10.1.8",
     "eslint-plugin-prettier": "5.5.4",
     "express-rate-limit": "8.0.1",
