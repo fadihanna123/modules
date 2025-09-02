@@ -39,7 +39,7 @@
     "@types/node-cron": "3.0.11",
     "@types/validator": "13.15.2",
     "@typescript-eslint/eslint-plugin": "8.39.1",
-    "@typescript-eslint/parser": "8.39.1",
+    "@typescript-eslint/parser": "8.41.0",
     "cors": "2.8.5",
     "dotenv": "17.2.1",
     "eslint": "9.34.0",
