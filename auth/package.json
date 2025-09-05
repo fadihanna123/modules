@@ -1,7 +1,7 @@
 {
   "name": "auth_module",
-  "version": "1.0.8",
-  "lastUpgraded": "20250814",
+  "version": "1.0.9",
+  "lastUpgraded": "20250905",
   "license": "MIT",
   "private": "true",
   "bugs": "https://github.com/fadihanna123/modules/issues",
@@ -14,29 +14,29 @@
     "email": "fhanna181@gmail.com"
   },
   "scripts": {
+    "setup": "yarn --silent --ignore-scripts --emoji",
     "dev": "ts-node-dev --poll -r tsconfig-paths/register src/server",
     "lint": "eslint .",
-    "format": "prettier -w .",
-    "setup": "yarn --silent --ignore-scripts --emoji --production"
+    "format": "prettier -w ."
   },
   "devDependencies": {
     "@eslint/eslintrc": "3.3.1",
-    "@eslint/js": "9.33.0",
+    "@eslint/js": "9.35.0",
     "@types/cors": "2.8.19",
     "@types/eslint": "9.6.1",
     "@types/express": "5.0.3",
     "@types/jsonwebtoken": "9.0.10",
     "@types/luxon": "3.7.1",
-    "@types/node": "24.2.1",
+    "@types/node": "24.3.1",
     "@types/node-cron": "3.0.11",
-    "@typescript-eslint/eslint-plugin": "8.39.1",
-    "@typescript-eslint/parser": "8.39.1",
+    "@typescript-eslint/eslint-plugin": "8.42.0",
+    "@typescript-eslint/parser": "8.42.0",
     "cors": "2.8.5",
-    "dotenv": "17.2.1",
-    "eslint": "9.33.0",
+    "dotenv": "17.2.2",
+    "eslint": "9.35.0",
     "eslint-config-prettier": "10.1.8",
     "eslint-plugin-prettier": "5.5.4",
-    "express-rate-limit": "8.0.1",
+    "express-rate-limit": "8.1.0",
     "globals": "16.3.0",
     "node-cron": "4.2.1",
     "ts-node-dev": "2.0.0",
@@ -48,7 +48,7 @@
     "express": "5.1.0",
     "helmet": "8.1.0",
     "jsonwebtoken": "9.0.2",
-    "luxon": "3.7.1",
+    "luxon": "3.7.2",
     "winston": "3.17.0"
   },
   "engines": {

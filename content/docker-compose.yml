@@ -1,7 +1,7 @@
 services:
   content_module_db_service:
     image: mysql:lts-oraclelinux9
-    container_name: content_module_db_container
+    container_name: content_module_db
     ports:
       - 3306:3306
     restart: unless-stopped
@@ -14,7 +14,7 @@ services:
       - content_module_db-data:/var/lib/mysql
 
   content_module_admin_service:
-    image: phpmyadmin:fpm-alpine
+    image: phpmyadmin:latest
     container_name: content_module_db_admin
     ports:
       - 8080:80

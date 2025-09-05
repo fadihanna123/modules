@@ -1,6 +1,6 @@
 services:
   auth_service:
-    build: .
+    build: ./
     container_name: auth_module
     ports:
       - 5000:5000
