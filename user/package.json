@@ -54,7 +54,7 @@
     "typescript": "5.9.2"
   },
   "dependencies": {
-    "@prisma/client": "6.15.0",
+    "@prisma/client": "6.16.3",
     "express": "5.1.0",
     "helmet": "8.1.0",
     "jsonwebtoken": "9.0.2",
