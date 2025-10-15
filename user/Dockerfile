@@ -1,8 +1,8 @@
-FROM node:22.17.1-slim
+FROM node:22.20-alpine
 WORKDIR /user
 COPY yarn.lock package.json ./
 RUN npm i --silent --ignore-scripts -g prisma ts-node-dev 
 RUN yarn --silent
-COPY . .
+COPY ./ ./
 EXPOSE ${DEV_PORT}
 CMD ["yarn", "dev"]

@@ -41,7 +41,6 @@ services:
       - /user/node_modules
     links:
       - user_module_db_service
-    command: yarn dev
 
 volumes:
   user_module_db-data:

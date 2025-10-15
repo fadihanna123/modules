@@ -41,7 +41,6 @@ services:
       - /content/node_modules
     links:
       - content_module_db_service
-    command: yarn dev
 
 volumes:
   content_module_db-data:

@@ -1,7 +1,7 @@
-FROM node:22.19.0-slim
+FROM node:22.20-alpine
 WORKDIR /content
 COPY yarn.lock package.json ./
 RUN yarn setup
-COPY . .
+COPY ./ ./
 EXPOSE ${DEV_PORT}
 CMD ["yarn", "dev"]
