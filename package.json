@@ -6,7 +6,7 @@
   "author": "fadihanna123 <fadialias230@gmail.com>",
   "license": "MIT",
   "scripts": {
-    "setup": "yarn --silent --emoji --ignore-scripts --immutable --cwd ./auth && yarn --silent --emoji --ignore-scripts --immutable --cwd ./content && yarn --silent --emoji --ignore-scripts --immutable --cwd ./user && yarn seed",
+    "setup": "yarn --emoji --silent --ignore-scripts --immutable && yarn --cwd ./auth --silent --emoji --ignore-scripts --immutable && yarn --silent --emoji --ignore-scripts --immutable --cwd ./content && yarn --silent --emoji --ignore-scripts --immutable --cwd ./user && yarn seed",
     "dev": "concurrently \"cd auth && yarn dev\" \"cd content && yarn dev\" \"cd user && yarn dev\"",
     "seed": "yarn --cwd ./content seed && yarn --cwd ./user seed",
     "clear": "rimraf node_modules && cd auth && rimraf node_modules dist dbDocs docs && cd .. && cd content && rimraf node_modules dbDocs dist docs && cd .. && cd user && rimraf node_modules dbDocs docs dist"
