@@ -52,7 +52,7 @@
   },
   "dependencies": {
     "@prisma/client": "6.18.0",
-    "express": "5.1.0",
+    "express": "5.2.0",
     "helmet": "8.1.0",
     "jsonwebtoken": "9.0.2",
     "luxon": "3.7.2",
