@@ -3,7 +3,7 @@ const { ALLOWEDOMAINS, NODE_ENV, DEV_PORT, PROD_PORT, USE_CORS, Token } =
 
 export const allowedURLs = ALLOWEDOMAINS;
 
-export const port =
+export const port: number =
   NODE_ENV === 'development'
     ? DEV_PORT
     : NODE_ENV === 'production'

@@ -1,6 +1,6 @@
-@base=http://localhost:{{DEV_PORT}}
+@base=http://localhost:{{DEV_PORT}}/api
 ###
-POST {{base}}/login
+POST {{base}}/auth/login
 Content-Type: application/json
 
 {

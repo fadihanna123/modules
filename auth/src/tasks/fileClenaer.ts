@@ -11,9 +11,9 @@ import fs from 'fs';
  * @example fileClenaer();
  */
 export const fileCleaner = (): void => {
-  const logsPath = './src/logs/debug.log';
-  const errorPath = './src/logs/error.log';
-  const newValue = '';
+  const logsPath: string = './src/logs/debug.log';
+  const errorPath: string = './src/logs/error.log';
+  const newValue: string = '';
 
   fs.promises
     .readFile(logsPath)
@@ -24,7 +24,7 @@ export const fileCleaner = (): void => {
         }
       });
     })
-    .catch((err) => {
+    .catch((err: Error) => {
       if (err) {
         throw err;
       }
